@@ -25,6 +25,10 @@ export class UserService {
       this._refresh.next();
     }));
   }
+  deleteTeam2(teamid: any){
+    return this._httpClient.delete('/api/teams/'+teamid).pipe(tap(()=>{
+      this._refresh.next();
+    }));
+  }
 
-  
 }
